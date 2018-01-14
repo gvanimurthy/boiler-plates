@@ -1,0 +1,25 @@
+{
+  "name": "boiler-plates-recipes",
+  "version": "1.0.1",
+  "description": "Various Boiler plates",
+  "main": "",
+  "scripts": {
+    "start": "gulp git:clone && gulp copy:release && gulp git:commit && gulp git:push"
+  },
+  "author": "Vani Ganapa",
+  "license": "ISC",
+  "devDependencies": {
+    "fs": "0.0.1-security",
+    "gulp": "^3.9.1",
+    "gulp-git": "^2.5.0",
+    "gulp-prompt": "^1.0.1",
+    "npm": "^5.6.0",
+    "npm-registry": "^0.1.13",
+    "path": "^0.12.7",
+    "yargs": "^10.1.1"
+  },
+  "dependencies": {
+    "gulp-shell": "^0.6.5",
+    "run-sequence": "^2.2.1"
+  }
+}

@@ -83,5 +83,4 @@ const config = {
 		new extractTextPlugin(pkg.name + '.css'),
 	]
 };
-
 module.exports = config;
