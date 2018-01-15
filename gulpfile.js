@@ -69,28 +69,14 @@ const npmLogin = function (npmTask) {
 	})
 };
 
-// gulp.task('publish', npmLogin(npmPublish));
-gulp.task('git:clone', function() {
-	git.clone('https://github.com/gvanimurthy/boiler-plates.git', {args: './release'}, function(err) {
-		if(err) throw err;
-	});
-});
-gulp.task('copy:release', function () {
-	gulp.src('./webpack/**/*')
-		.pipe(gulp.dest('./release/webpack/'));
-});
+gulp.task('publish', npmLogin(npmPublish));
+
 gulp.task('git:commit', function (cb) {
-	process.chdir('./release');
 	return gulp.src('./*')
 		.pipe(git.add())
 		.pipe(git.commit(pjson.version))
-		// .pipe(git.push('origin', function (err) {
-		// 	if (err) throw err;
-		// }));
-	// return shell.task(['git diff'])();
 });
 gulp.task('git:push', function(){
-	process.chdir('./release');
 	git.push('origin', function (err) {
 		if (err) throw err;
 	});

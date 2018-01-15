@@ -1,10 +1,10 @@
 {
   "name": "boiler-plates-recipes",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Various Boiler plates",
   "main": "",
   "scripts": {
-    "start": "gulp git:clone && gulp copy:release && gulp git:commit && gulp git:push"
+    "publish": "gulp publish && gulp git:commit && gulp git:push"
   },
   "author": "Vani Ganapa",
   "license": "ISC",
