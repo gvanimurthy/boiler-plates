@@ -1,6 +1,7 @@
 const gulp = require('gulp'),
 	prompt = require('gulp-prompt'),
 	fs = require('fs'),
+	del = require('del'),
 	path = require('path'),
 	npm = require('npm'),
 	git = require('gulp-git'),
@@ -32,6 +33,7 @@ const npmPublish = function() {
 				throw Error(err);
 			}
 			console.log("Publish successfull: " + JSON.stringify(res));
+			del([path.resolve(pkg_id)], cb);
 			return true;
 		})
 	})

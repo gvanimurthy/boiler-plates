@@ -1,0 +1,24 @@
+{
+  "name": "gulp-boiler-plate",
+  "version": "1.0.0",
+  "description": "Boiler plate - gulp + jquery + sass",
+  "main": "gulpfile.js",
+  "directories": {
+    "src": "src",
+    "build": "build",
+    "release": "release",
+    "docs": "docs"
+  },
+  "scripts": {
+    "publish-wt": "gulp wt-clean && gulp wt-clone && gulp wt-sync && gulp wt-npm && gulp wt-commit && gulp wt-push"
+
+  },
+  "author": "Vani Ganapa",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "path": "^0.12.7"
+  }
+}
