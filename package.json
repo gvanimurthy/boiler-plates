@@ -3,6 +3,10 @@
   "version": "1.0.3",
   "description": "Various Boiler plates",
   "main": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gvanimurthy/boiler-plates.git"
+  },
   "scripts": {
     "publish": "gulp publish && gulp git:commit && gulp git:push"
   },
